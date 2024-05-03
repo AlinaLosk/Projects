@@ -20,11 +20,10 @@ def binary_search(array, element, left, right):
     else:  # иначе в правой
         return binary_search(array, element, middle + 1, right)
 
-    if element < left or element > right:
-        print('Числа нет в диапазоне')
-    else:
-        print(binary_search(array, element, 0, len(array) - 1))
+if element < left or element > right:
+    print('Числа нет в диапазоне')
+else:
+    print(binary_search(array, element, 0, len(array) - 1))
 
-print('Число не входит в диапозон введенных Вами чисел')
 print(array)
 print('Индекс введенного числа: ', binary_search(array, element, 0, len(array) - 1))
